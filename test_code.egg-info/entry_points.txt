@@ -1,5 +1,0 @@
-
-      [console_scripts]
-      test_code = test_code.test_code:call
-      cli_test = test_code.cli_test:execute
-    
