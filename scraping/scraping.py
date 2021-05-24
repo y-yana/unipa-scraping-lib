@@ -1,4 +1,3 @@
-from platform import architecture
 import requests
 import click
 import chromedriver_binary
@@ -9,15 +8,8 @@ import datetime
 import json
 
 
-def get_init(url: str, user_id: str, user_password: str, show_chrome: bool):
-    '''
-        Get started and login to Universal-Passport.
-        Args:
-        url(str): Your Universal-Passport URL.
-        user_id(str): Your Student ID.
-        user_password(str): Password of your student ID.
-        show_chrome(bool): False is default headless mode. True is display chrome display.
-    '''
+def get_init(url, user_id, user_password, show_chrome):
+
     global browser
     global article_url
     article_url = 'https://hiro-unipa.itp.kindai.ac.jp/up/faces/up/po/pPoa0202A.jsp?fieldId='
@@ -224,17 +216,12 @@ def create_json():
     scraping_json = {'get-date': scraping_date,
                      'user-name': user_name, 'data': data}
 
+    global data_json
+
     data_json = json.dumps(scraping_json, indent=4, ensure_ascii=False)
 
-    print(data_json)
 
-
-@click.command()
-@click.option('--unipa_url', 'url', prompt=True, type=str, help='UNIVERSAL PASSPORT URL', default='https://hiro-unipa.itp.kindai.ac.jp/up/faces/up/po/Poa00601A.jsp')
-@click.option('--user_id', prompt=True, type=str, help='Your student ID number.')
-@click.option('--user_password', prompt=True, type=str, hide_input=True, help='Your student ID password.')
-@click.option('--show_chrome', prompt=False, type=bool, help='Show chrome display.', default=False)
-def main(url: str, user_id: str, user_password: str, show_chrome: bool):
+def main(url, user_id, user_password, show_chrome):
     get_init(url, user_id, user_password, show_chrome)
     get_stream_info()
     get_stream_education()
@@ -242,6 +229,9 @@ def main(url: str, user_id: str, user_password: str, show_chrome: bool):
     get_scraping_date()
     create_json()
 
+    return data_json
+
 
 if __name__ == "__main__":
     main()
+

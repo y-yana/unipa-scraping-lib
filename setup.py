@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="scraping",
-    version='1.6',
-    description='test',
+    version='1.7',
+    description='library for scraping UNIVERSAL PASSPORT',
     author='y-yana',
     url='https://github.com/y-yana/unipa-scraping-lib',
     packages=find_packages(),

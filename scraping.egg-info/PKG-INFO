@@ -1,7 +1,7 @@
 Metadata-Version: 1.0
 Name: scraping
-Version: 1.6
-Summary: test
+Version: 1.7
+Summary: library for scraping UNIVERSAL PASSPORT
 Home-page: https://github.com/y-yana/unipa-scraping-lib
 Author: y-yana
 Author-email: UNKNOWN
