@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="test_code",
-    version='1.1',
+    version='1.2',
     description='test',
     author='y-yana',
     url='https://github.com/y-yana/unipa-scraping-lib',
@@ -11,4 +11,5 @@ setup(
       [console_scripts]
       test_code = test_code.cli_test:execute
     """,
+    install_requires=open('requirements.txt').read().splitlines(),
 )
