@@ -1,0 +1,13 @@
+MANIFEST.in
+requirements.txt
+setup.py
+scraping/__init__.py
+scraping/cli_test.py
+scraping/scraping.py
+scraping/test_code.py
+scraping.egg-info/PKG-INFO
+scraping.egg-info/SOURCES.txt
+scraping.egg-info/dependency_links.txt
+scraping.egg-info/entry_points.txt
+scraping.egg-info/requires.txt
+scraping.egg-info/top_level.txt

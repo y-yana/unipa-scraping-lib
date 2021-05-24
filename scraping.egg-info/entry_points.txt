@@ -1,0 +1,6 @@
+
+      [console_scripts]
+      scraping = scraping.scraping:main
+      test_code = scraping.test_code:call
+      cli_test = scraping.cli_test:execute
+    
