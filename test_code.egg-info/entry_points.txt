@@ -1,0 +1,4 @@
+
+      [console_scripts]
+      test_code = test_code.cli_test:execute
+    
